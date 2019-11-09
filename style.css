@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700|Rubik:300,400,500,700&display=swap');
+
+html {
+  font-family: var(--karla);
+}
+
+body {
+  background: lavender;
+  font-family: 'Karla', sans-serif;
+}
+
+h1 {
+  font-family: 'Rubik', sans-serif;
+  color: blueviolet;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: cornflowerblue;
+  max-width: 600px;
+}
+
+.app-header {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.main-btn {
+  border: none;
+  background: blueviolet;
+  color: white;
+  padding: .5rem 1.5rem;
+}
+
+.main-btn:hover,
+.main-btn.active {
+  background: #5f1c9c;
+  color: cyan;
+}
+
+/* VIEW TOGGLE */
+.view-toggle {
+  margin: 1rem;
+}
+.view[data-view-hidden] {
+  display: none;
+}
+
+/* FORM */
+#form {
+  display: flex;
+  flex-flow: column;
+}
+
+.form-group {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+label {
+  color: blueviolet;
+}
+
+input {
+  border-radius: 3px;
+}
+
+.error {
+  background: red;
+  color: white;
+}
+
+.form-control.error::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+.form-control.error:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: white;
+}
+
+.form-control.error::-ms-input-placeholder { /* Microsoft Edge */
+  color: white;
+}
+
+
+/* TABLE */
+#table {
+  position: relative;
+  border: 1px solid rgba(138, 43, 226, 0.3);
+  background: white;
+}
+
+.table thead {
+  border-bottom: 1px solid rgba(138, 43, 226, 0.3);
+  background: blueviolet;
+  color: white;
+}
+
+.table thead th,
+.table th,
+.table td {
+  border-bottom: none;
+  border-top: none;
+}
+
+.table tbody tr:nth-of-type(odd) {
+  background: #f1f1f1;
+}
+
+.table tbody tr:hover {
+  background: #ececec;
+}
+
+.table .options {
+  display: flex;
+}
+
+.table .options button {
+  padding: .25rem .75rem;
+  border: none;
+  color: white;
+}
+
+.table .options button.edit {
+  margin-right: .5rem;
+  background: green;
+}
+
+.table .options button.edit:hover {
+  background: darkgreen;
+}
+
+.table .options button.remove {
+  background: red;
+}
+
+.table .options button.remove:hover {
+  background: darkred;
+}
+
+.details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  color: white;
+  background: blueviolet;
+  transition: all .3s ease;
+  border-radius: 5px 5px 0 0;
+  padding: .25rem 1rem;
+}
+
+.extra[data-hidden] {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  #form {
+    width: 100%;
+  }
+}

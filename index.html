@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	<title>Trip Budgeting Project</title>
+</head>
+<body>
+	<div id="root">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12">
+					<div class="app-header">
+						<h1>Travel Planner</h1>
+						<h2>Use this application to budget for your upcoming trip and receive useful information about your destination.</h2>
+						<div class="view-toggles">
+							<button id="viewTable" class="view-toggle main-btn active">View Planner</button>
+							<button id="newDestination" class="view-toggle main-btn">New Destination</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div id="table-view" class="col-12 view">
+					<table class="table" id="table">
+						<button id="details">More Details</button>
+						<thead>
+							<tr>
+								<th data-field-name="startCity">From</th>
+								<th data-field-name="destination">Destination</th>
+								<th data-field-name="">Leave</th>
+								<th data-field-name="">#Days</th>
+								<th data-field-name="" class="extra" data-hidden>Cost Roundtrip</th>
+								<th data-field-name="" class="extra" data-hidden>Cost Hotel/Day</th>
+								<th data-field-name="" class="extra" data-hidden>Cost Meals/Day</th>
+								<th data-field-name="">Total Expenses</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Phoenix</td>
+								<td>Chicago</td>
+								<td>4/12/2020</td>
+								<td>8</td>
+								<td class="extra" data-hidden>415.00</td>
+								<td class="extra" data-hidden>110.00</td>
+								<td class="extra" data-hidden>65.00</td>
+								<td class="options">
+									<button class="edit">Edit</button>
+									<button class="remove">Remove</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Denver</td>
+								<td>Miami</td>
+								<td>12/23/2019</td>
+								<td>7</td>
+								<td class="extra" data-hidden>700.00</td>
+								<td class="extra" data-hidden>250.00</td>
+								<td class="extra" data-hidden>120.00</td>
+								<td class="options">
+									<button class="edit">Edit</button>
+									<button class="remove">Remove</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Houston</td>
+								<td>Seattle</td>
+								<td>3/07/2020</td>
+								<td>4</td>
+								<td class="extra" data-hidden>500.00</td>
+								<td class="extra" data-hidden>150.00</td>
+								<td class="extra" data-hidden>90.00</td>
+								<td class="options">
+									<button class="edit">Edit</button>
+									<button class="remove">Remove</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div id="form-view" class="col-6 view" data-view-hidden>
+					<form id="form">
+						<div class="form-group">
+							<label for="startCity">Starting City</label>
+							<input id ="startCity" class="form-control" type="text" placeholder="Phoenix">
+						</div>
+						<div class="form-group">
+							<label for="destination">Destination</label>
+							<input id ="destination" class="form-control" type="text" placeholder="Chicago">
+						</div>
+						<div class="form-group">
+							<label for="roundTripCost">Cost for Round Trip</label>
+							<input
+								id="roundTripCost"
+								type="number"
+								class="form-control"
+								placeholder="0.00"
+								min="0.01"
+								step="0.01"
+							>	
+						</div>
+						<div class="form-group">
+							<label for="hotelCost">Cost of Hotel Per Day</label>
+							<input
+								id="hotelCost"
+								type="number"
+								class="form-control"
+								placeholder="0.00"
+								min="0.01"
+								step="0.01"	
+							>	
+						</div>
+						<div class="form-group">
+							<label for="mealCost">Cost of Meals Per Day</label>
+							<input
+								id="mealCost"
+								type="number"
+								class="form-control"
+								placeholder="0.00"
+								min="0.01"
+								step="0.01"
+							>	
+						</div>
+						<div class="form-group">
+							<label for="numDays">Number of Days</label>
+							<input id="numDays" class="form-control" type="number" placeholder="How many days will your trip be?">
+						</div>
+						<div class="form-group">
+							<label for="startDate">Start Date</label>
+							<input id="startDate" class="form-control" type="date" min="" placeholder="mm/dd/yyyy">
+						</div>
+						<button type="submit" class="btn btn-primary">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="scripts.js"></script>
+</body>
+</html>
